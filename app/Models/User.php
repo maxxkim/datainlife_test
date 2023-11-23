@@ -11,6 +11,6 @@ class User extends Model
 
     public function groups()
     {
-        return $this->belongsToMany(Group::class)->withPivot('expired_at')->withTimestamps();
+        return $this->belongsToMany(Group::class)->using(GroupStudent::class);
     }
 }

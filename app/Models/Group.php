@@ -11,6 +11,6 @@ class Group extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class)->withPivot('expired_at')->withTimestamps();
+        return $this->belongsToMany(User::class)->using(GroupStudent::class);
     }
 }
