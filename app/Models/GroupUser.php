@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class User extends Pivot
+class GroupUser extends Pivot
 {
-    protected $table = 'group_student';
-
+    protected $table = 'group_user';
 }

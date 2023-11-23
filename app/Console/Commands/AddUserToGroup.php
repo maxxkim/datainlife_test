@@ -38,8 +38,7 @@ class AddUserToGroup extends Command
             $user->save();
         }
 
-        $user->groups()->attach($group->id);
-
-        $this->info("User {$user->name} added to group {$group->name}");
+        $group->users()->attach($group->id);
+        $this->info("Пользователь {$user->name} добавлен в группу {$group->name}");
     }
 }

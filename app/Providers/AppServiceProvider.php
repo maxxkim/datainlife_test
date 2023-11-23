@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Group;
-use App\Observers\GroupObserver;
+use App\Models\GroupUser;
+use App\Observers\GroupUserObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,6 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Group::observe(GroupObserver::class);
+        GroupUser::observe(GroupUserObserver::class);
     }
 }

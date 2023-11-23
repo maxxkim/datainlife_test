@@ -20,8 +20,6 @@ class CreateGroupUserTable extends Migration
             $table->dateTime('expired_at')->nullable();
             $table->timestamps();
 
-            $table->unique(['user_id', 'group_id']);
-
             $table->foreign('user_id')
                   ->references('id')
                   ->on('users')
